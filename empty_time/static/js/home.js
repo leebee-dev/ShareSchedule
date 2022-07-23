@@ -4,7 +4,7 @@ window.onload = function(){
         popup();
     });
 
-    let class_add_complete_btn = document.getElementById("complete-add");
+    let class_add_complete_btn = document.getElementById("complete");
     class_add_complete_btn.addEventListener('click',function(event){
         popdown();
     });
@@ -24,3 +24,14 @@ function popdown(){
     let add_dialog = document.getElementById("class-adding");
     add_dialog.style.visibility = "hidden";
 }
+
+$(document).ready(function(){
+    $("#contents").click(function(){
+        $("#popup").fadeIn();
+    });
+    $("#exit").click(function(){
+        $("#popup").fadeOut();
+    });
+});
+
+
