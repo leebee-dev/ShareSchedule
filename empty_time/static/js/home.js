@@ -13,32 +13,32 @@ window.onload = function(){
     add_dialog.style.visibility = "hidden";
 
 
-    // let class_item_to_write = document.getElementById('user_class_info').innerText;
+    let class_item_to_write = document.getElementById('user_class_info').innerText;
     // let class_items = JSON.parse(class_item_to_write);
 
     let table = document.getElementById("table-schedule");
 
-    refresh_table(table);
+    refresh_table(table,class_item_to_write);
 
 };
 
-function refresh_table(table,class_items){
+function refresh_table(table,user_class){
 
     // let table = $('table_schedule');
 
     let rowLen = table.rows.length;
     // let celLen = table.cells.length;
+    let user_class_json = JSON.parse(user_class);
 
-    console.log(rowLen)
+    console.log(typeof user_class_json);
     // console.log(celLen)
-    table.rows[0].cells[1].style.backgroundColor = "#6667AB";
+    table.rows[4].cells[1].style.backgroundColor = "#6667AB";
 
-    
-    // let tds = table.rows[3].getElementsByTagName("td");
-    // console.log(tds);
-    // tds.style.backgroundColor = "red"
+    console.log(user_class);
 
-    // console.log(tds[3].firstChild);
+    let user_id = Object.keys(user_class_json);
+
+    console.log(user_id);
     
 }
 
