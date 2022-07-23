@@ -9,8 +9,76 @@
     <script src="{% static 'js/home.js' %}"> </script>
     <title>Empty Time</title>
   </head>
-  <body>
-    <!-- <h1>HAHA</h1> -->
+
+    <body>
+      <nav class="navbar">
+
+        <div class="navbar__logo">
+          <img src="{% static 'img/logo.png' %}" alt="">
+          <p>EmptyTime</p>
+        </div>
+    
+        <div class="navbar__menu">
+          <a href="">Sign in</a>
+          <a href="">Sign up</a>
+          <a href="">Setting</a> 
+        </div>
+      </nav>
+      
+      <main>
+          <div class="week">
+            <p>MON</p>
+            <p>TUE</p>
+            <p>WED</p>
+            <p>TUE</p>
+            <p>FRI</p>
+          </div>
+        
+          <tbody>
+            <tr>
+              <td></td>
+            <tr>
+          </tbody>
+          
+          <div class="asdie">
+            <button class="add-class-btn">강의 추가</button>
+  
+            <div class="search">
+              <div class="search-box">
+                <img src="{% static 'img/search.png' %}" alt="">
+                <input type="text" placeholder="검색">
+              </div>
+              
+              <div class="major-name-container">
+                <div class="major-name-box">
+                  <p class="major">항공전자정보공학부</p>
+                  <p>오상준(yoon55)</p>
+                </div>
+                  <img src="{% static 'img/add.png' %}" alt="">
+              </div>
+            </div>
+  
+            <div class="friend_list-container">
+              <p class="friend_list">친구목록</p>
+  
+              <div class="major-name-container">
+                <div class="major-name-box">
+                  <p class="major">항공전자정보공학부</p>
+                  <p>오상준(yoon55)</p>
+                </div>
+              </div>
+              <img src="{% static 'img/delete.png' %}" alt="">
+  
+              <p class="major">항공전자정보공학부</p>
+              <p>오상준(yoon55)</p>
+              <img src="{% static 'img/delete.png' %}" alt="">
+  
+              <p class="major">항공전자정보공학부</p>
+              <p>오상준(yoon55)</p>
+  
+            </div>
+          </div>
+        </main>
 
     <button class="add-class-btn">강의추가</button>
 
