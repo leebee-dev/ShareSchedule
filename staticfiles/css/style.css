@@ -12,13 +12,6 @@
 }
 
 @font-face {
-    font-family: 'LeferiPoint-WhiteA';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteA.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
 	font-family: 'Pretendard Variable';
 	font-weight: 45 920;
 	font-style: normal;
@@ -156,7 +149,7 @@ main {
 }
 
 .week p {
-	color: #535c6a;
+	color: 	#535c6a;
 }
 
 .add-class-btn {
@@ -203,7 +196,6 @@ main {
 
 .search-box {
 	display: flex;
-    padding: 0px 5px;
 }
 
 .friend_list-container {
@@ -245,9 +237,9 @@ main {
 
 .major {
 	font-family: 'Pretendard';
-    font-weight: 300;
+    font-weight: 500;
 	font-size: 10px;
-	color: #828282;
+	color: #d9d9d9;
 }
 
 .name {
@@ -259,6 +251,7 @@ main {
 
 .wrap {
 	display: flex;
+	/* width: 900px; */
 	justify-content: space-between;
     align-items: center;
     padding: 0px 30px;
@@ -266,19 +259,14 @@ main {
 
 table {
     width: 100%;
+    border: 1px solid #444444;
     border-collapse: collapse;
-	width: 1050px;
+	width: 100%;
 	height: 600px;
-    margin: auto;
+    padding: 0px 30px;
 }
 
 td {
-    border-style: solid;
-	border-color: #e9e9e9;
-	border-width: 1px;
+    border: 1px solid #444444;
     width: 100px;
-    text-align: center;
-    font-family: 'LeferiPoint-WhiteA';
-
 }
-
