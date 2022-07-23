@@ -29,6 +29,7 @@
         <div class="wrap">
           <div class="center">
             <div class="week">
+              <p>TIME</p>
               <p>MON</p>
               <p>TUE</p>
               <p>WED</p>
@@ -272,14 +273,15 @@
                 <img src="{% static 'img/delete.png' %}" alt="">
               </div>
             </div>
+
             <button class="add-class-btn">강의 추가</button>
 
             <div id="class-adding">
               <form action="" method="post">
                 {% csrf_token %}
                 <p>
-                  <label for="class_name">강의명</label>
-                  <input id="class_name" type="text" name="class_name_field" placeholder="강의명을 입력해주세요">
+                  <label class="class-name-title" for="class_name">강의명</label>
+                  <input class="class-name" id="class_name" type="text" name="class_name_field" placeholder="강의명을 입력해주세요">
                 </p>
                 
                 <p>
