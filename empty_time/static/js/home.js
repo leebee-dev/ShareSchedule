@@ -1,12 +1,26 @@
 window.onload = function(){    
-    let addd = document.getElementById('add_schedule');
-    addd.addEventListener('click', popup)
-}
+    let class_add = document.getElementsByClassName('add-class-btn');
+    class_add[0].addEventListener('click', function(event){
+        popup();
+    });
+
+    let class_add_complete_btn = document.getElementById("complete-add");
+    class_add_complete_btn.addEventListener('click',function(event){
+        popdown();
+    });
+
+    let add_dialog = document.getElementById("class-adding");
+    add_dialog.style.visibility = "hidden";
+};
 
 function popup(){
-    let name = "create_page";
-    let option = " width= 500, height= 500, top= 100, left = 200, location = no"
+    console.log("popup")
+    let add_dialog = document.getElementById("class-adding");
+    add_dialog.style.visibility = "visible";
+}
 
-    window.open("create.html" , name , option);
-
+function popdown(){
+    console.log("popdown")
+    let add_dialog = document.getElementById("class-adding");
+    add_dialog.style.visibility = "hidden";
 }

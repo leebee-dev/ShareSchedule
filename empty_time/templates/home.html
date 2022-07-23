@@ -6,12 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <script src="{% static 'js/home.js' %}"> </script>
     <title>Empty Time</title>
   </head>
   <body>
     <!-- <h1>HAHA</h1> -->
-    <div id="class-adding" class="class-adding">
+
+    <button class="add-class-btn">강의추가</button>
+
+    <div id="class-adding">
       <form action="" method="post">
+        {% csrf_token %}
         <p>
           <label for="class_name">강의명</label>
           <input id="class_name" type="text" name="class_name_field" placeholder="강의명을 입력해주세요">
@@ -46,7 +51,7 @@
           <input id="location" type="text" name="location_field" placeholder="장소를 입력해주세요">
         </p>
 
-        <input id="add-class" type="submit" value="완료">
+        <input id="complete-add" type="submit" value="완료">
       </form>
     </div>
   </body>
