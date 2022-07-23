@@ -6,16 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="{% static 'js/home.js' %}"></script>
     <title>Empty Time</title>
   </head>
 
   <body>
     <nav class="navbar">
-      <div class="navbar__logo">
-        <img src="{% static 'img/logo.png' %}" alt="" />
-        <p>EmptyTime</p>
-      </div>
       <div class="navbar__logo">
         <img src="{% static 'img/logo.png' %}" alt="" />
         <p>EmptyTime</p>
@@ -29,9 +26,132 @@
     </nav>
 
     <main>
+      <div id="popup">
+        <div id="popmenu">
+          <div class="class-adding-html" id="class-adding">
+            <form action="" method="post">
+              {% csrf_token %}
+
+              <div class="exit-d">
+                <button id="exit" class="exit">X</button>
+              </div>
+
+              <p>
+                <label class="add-class-detail" for="class_name">강의명</label>
+                <input
+                  class="add-class-input"
+                  id="class_name"
+                  type="text"
+                  name="class_name_field"
+                  placeholder="강의명을 입력해주세요"
+                />
+              </p>
+
+              <p>
+                <label class="add-class-detail" for="date">요일</label>
+                <input
+                  class="add-class-detail"
+                  id="date_mon"
+                  type="button"
+                  name="date_mon_field"
+                  value="월"
+                />
+                <input
+                  class="add-class-detail"
+                  id="date_tue"
+                  type="button"
+                  name="date_tue_field"
+                  value="화"
+                />
+                <input
+                  class="add-class-detail"
+                  id="date_wed"
+                  type="button"
+                  name="date_wed_field"
+                  value="수"
+                />
+                <input
+                  class="add-class-detail"
+                  id="date_thr"
+                  type="button"
+                  name="date_thr_field"
+                  value="목"
+                />
+                <input
+                  class="add-class-detail"
+                  id="date_fri"
+                  type="button"
+                  name="date_fri_field"
+                  value="금"
+                />
+              </p>
+
+              <p>
+                <label for="start_time">강의시작시간</label>
+                <input
+                  id="start_time"
+                  type="time"
+                  name="start_time_field"
+                  value="13:30"
+                  min="09:00"
+                  max="19:00"
+                  step="1800"
+                />
+              </p>
+
+              <p>
+                <label for="end_time">강의종료시간</label>
+                <input
+                  id="end_time"
+                  type="time"
+                  name="end_time_field"
+                  value="13:30"
+                  min="09:00"
+                  max="19:00"
+                  step="1800"
+                />
+              </p>
+
+              <p>
+                <label class="add-class-detail" for="professor_name"
+                  >교수님</label
+                >
+                <input
+                  class="add-class-input"
+                  id="professor_name"
+                  type="text"
+                  name="professor_name_field"
+                  placeholder="교수님을 입력해주세요"
+                />
+              </p>
+
+              <p>
+                <label class="add-class-detail" for="location">장소</label>
+                <input
+                  class="add-class-input"
+                  id="location"
+                  type="text"
+                  name="location_field"
+                  placeholder="장소를 입력해주세요"
+                />
+              </p>
+
+              <input
+                class="complete"
+                id="complete-add"
+                type="submit"
+                value="완료"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
       <p style="display: none" id="user_class_info">{{schedules}}</p>
       <div class="wrap">
         <div class="center">
+          <!--contents-->
+          <!-- <div id="contents">여기를 누르면 전체 팝업이 뜹니다.</div> -->
+
           <div class="week">
             <p>TIME</p>
             <p>MON</p>
@@ -223,107 +343,8 @@
             <img src="{% static 'img/delete.png' %}" alt="" />
           </div>
           {% endfor %}
-
-          <button class="add-class-btn">강의 추가</button>
-
-          <div id="class-adding">
-            <form action="{% url 'create_class' %}" method="post">
-              {% csrf_token %}
-              <p>
-                <label class="class-name-title" for="class_name">강의명</label>
-                <input
-                  class="class-name"
-                  id="class_name"
-                  type="text"
-                  name="class_name_field"
-                  placeholder="강의명을 입력해주세요"
-                />
-              </p>
-
-              <p>
-                <label for="date">요일</label>
-                <input
-                  id="date_mon"
-                  type="button"
-                  name="date_mon_field"
-                  value="월"
-                />
-                <input
-                  id="date_tue"
-                  type="button"
-                  name="date_tue_field"
-                  value="화"
-                />
-                <input
-                  id="date_wed"
-                  type="button"
-                  name="date_wed_field"
-                  value="수"
-                />
-                <input
-                  id="date_thr"
-                  type="button"
-                  name="date_thr_field"
-                  value="목"
-                />
-                <input
-                  id="date_fri"
-                  type="button"
-                  name="date_fri_field"
-                  value="금"
-                />
-              </p>
-
-              <p>
-                <label for="start_time">강의시작시간</label>
-                <input
-                  id="start_time"
-                  type="time"
-                  name="start_time_field"
-                  value="13:30"
-                  min="09:00"
-                  max="19:00"
-                  step="1800"
-                />
-              </p>
-
-              <p>
-                <label for="end_time">강의종료시간</label>
-                <input
-                  id="end_time"
-                  type="time"
-                  name="end_time_field"
-                  value="13:30"
-                  min="09:00"
-                  max="19:00"
-                  step="1800"
-                />
-              </p>
-
-              <p>
-                <label for="professor_name">교수님</label>
-                <input
-                  id="professor_name"
-                  type="text"
-                  name="professor_name_field"
-                  placeholder="교수님을 입력해주세요"
-                />
-              </p>
-
-              <p>
-                <label for="location">장소</label>
-                <input
-                  id="location"
-                  type="text"
-                  name="location_field"
-                  placeholder="장소를 입력해주세요"
-                />
-              </p>
-
-              <input id="complete-add" type="submit" value="완료" />
-            </form>
-          </div>
         </div>
+        <button class="add-class-btn" id="contents">강의 추가</button>
       </div>
     </main>
   </body>
