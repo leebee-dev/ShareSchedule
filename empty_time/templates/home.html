@@ -11,13 +11,12 @@
     <title>Empty Time</title>
   </head>
 
-    <body>
-      <nav class="navbar">
-
-        <div class="navbar__logo">
-          <img src="{% static 'img/logo.png' %}" alt="">
-          <p>EmptyTime</p>
-        </div>
+  <body>
+    <nav class="navbar">
+      <div class="navbar__logo">
+        <img src="{% static 'img/logo.png' %}" alt="" />
+        <p>EmptyTime</p>
+      </div>
     
         <div class="navbar__menu">
           <a href="">Sign in</a>
@@ -27,7 +26,6 @@
       </nav>
 
       <main>
-
         <div id="popup">
           <div id="popmenu">
             <div class="class-adding-html" id="class-adding">
@@ -79,7 +77,7 @@
       
         </div>
       </div>
-       
+        <p style="display:none;" id='user_class_info'>{{schedules}}</p>
         <div class="wrap">
           <div class="center">
             
@@ -95,291 +93,192 @@
               <p>FRI</p>
             </div>
           
-            <table class="schedule">
+            <table id = "table-schedule" class="schedule">
               <tr>
-                <td rowspan="3">09:00 ~ 10:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td rowspan="2">09:00 ~ 10:00</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+              </tr>
               <tr>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+              </tr>
               <tr>
-                <!-- <td>09:30~10:00</td>
-                <td>09:30~10:00</td>
-                <td>09:30~10:00</td>
-                <td>09:30~10:00</td>
-                <td>09:30~10:00</td> -->
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td rowspan="2">10:00 ~ 11:00</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+              </tr>
               <tr>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+              </tr>
               <tr>
-                <td rowspan="3">10:00 ~ 11:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td rowspan="2">11:00 ~ 12:00</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+              </tr>
               <tr>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+              </tr>
               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td rowspan="2">12:00 ~ 13:00</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+              </tr>
               <tr>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+              </tr>
               <tr>
-                <td rowspan="3">11:00 ~ 12:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td rowspan="2">13:00 ~ 14:00</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+              </tr>
               <tr>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+              </tr>
               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td rowspan="2">14:00 ~ 15:00</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+              </tr>
               <tr>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+              </tr>
               <tr>
-                <td rowspan="3">12:00 ~ 13:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td rowspan="2">15:00 ~ 16:00</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+              </tr>
               <tr>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+              </tr>
               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td rowspan="2">16:00 ~ 17:00</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+              </tr>
               <tr>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+              </tr>
               <tr>
-                <td rowspan="3">13:00 ~ 14:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td rowspan="2">17:00 ~ 18:00</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+              </tr>
               <tr>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+              </tr>
               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td rowspan="2">18:00 ~ 19:00</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+              </tr>
               <tr>
-              <tr>
-                <td rowspan="3">14:00 ~ 15:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              <tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              <tr>
-              <tr>
-                <td rowspan="3">15:00 ~ 16:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              <tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              <tr>
-              <tr>
-                <td rowspan="3">16:00 ~ 17:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              <tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              <tr>
-              <tr>
-                <td rowspan="3">17:00 ~ 18:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              <tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              <tr>
-              <tr>
-                <td rowspan="3">18:00 ~ 19:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              <tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              <tr>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+                <td>ㅤ</td>
+              </tr>
             </table>
-          </div>
+        </div>
+      </div>
+
+      <div class="aside">
+        <div class="search">
+          <div class="search-box">
+            <img src="{% static 'img/search.png' %}" alt="" />
+            <input type="text" placeholder="검색" />
+          </div>            
           
-          <div class="aside">
-        
-            <div class="search">
-              <div class="search-box">
-                <img src="{% static 'img/search.png' %}" alt="">
-                <input type="text" placeholder="검색">
-              </div>
-              
-              <div class="major-name-container">
-                <div class="major-name-box">
-                  <p class="major">항공전자정보공학부</p>
-                  <p class="name">오상준(sflkj25)</p>
-                </div>
-                <img src="{% static 'img/add.png' %}" alt="">
-              </div>
+          <div class="major-name-container">
+            <div class="major-name-box">
+              <p class="major">항공전자정보공학부</p>
+              <p class="name">{{user.name}}({{user.nickname}})</p>
             </div>
-
-            <div class="friend_list-container">
-              <p class="friend_list">친구목록</p>
-
-              <div class="major-name-container">
-                <div class="major-name-box">
-                  <p class="major">자유전공학부</p>
-                  <p class="name">윤예지(ysdfkjhk1112)</p>
-                </div>
-                <img src="{% static 'img/delete.png' %}" alt="">
-              </div>
-
-              <div class="major-name-container">
-                <div class="major-name-box">
-                  <p class="major">소프트웨어학과</p>
-                  <p class="name">김주안(djjefk123)</p>
-                </div>
-                <img src="{% static 'img/delete.png' %}" alt="">
-              </div>
-
-              <div class="major-name-container">
-                <div class="major-name-box">
-                  <p class="major">항공우주기계공학부</p>
-                  <p class="name">박준형(sdfkk13)
-                  </p>
-                </div>
-                <img src="{% static 'img/delete.png' %}" alt="">
-              </div>
-
-              <div class="major-name-container">
-                <div class="major-name-box">
-                  <p class="major">소프트웨어학과</p>
-                  <p class="name">이준희(kjopvjjkw499)</p>
-                </div>
-                <img src="{% static 'img/delete.png' %}" alt="">
-              </div>
-
-              <div class="major-name-container">
-                <div class="major-name-box">
-                  <p class="major">항공전자정보공학부</p>
-                  <p class="name">오상준(yoon55)</p>
-                </div>
-                <img src="{% static 'img/delete.png' %}" alt="">
-              </div>
-
-              <div class="major-name-container">
-                <div class="major-name-box">
-                  <p class="major">자유전공학부</p>
-                  <p class="name">윤예지(ysdfkjhk1112)</p>
-                </div>
-                <img src="{% static 'img/delete.png' %}" alt="">
-              </div>
-
-              <div class="major-name-container">
-                <div class="major-name-box">
-                  <p class="major">소프트웨어학과</p>
-                  <p class="name">김주안(djjefk123)</p>
-                </div>
-                <img src="{% static 'img/delete.png' %}" alt="">
-              </div>
-            </div>
-
-            <!--pop up-->
-            
-
-            <button class="add-class-btn" id="contents" >강의 추가</button>
-            <!-- <input class="add-class-btn" type="button" value="강의 추가" onclick="showPopup();"  > -->
-
-            <!-- <div class="class-adding-html" id="class-adding">
-              <form action="" method="post">
-                {% csrf_token %}
-                <p>
-                  <label class="class-name-title" for="class_name">강의명</label>
-                  <input class="class-name" id="class_name" type="text" name="class_name_field" placeholder="강의명을 입력해주세요">
-                </p>
-                
-                <p>
-                  <label class="date-title" for="date">요일</label>
-                  <input class="add-class-detail" id="date_mon" type="button" name="date_mon_field" value="월">
-                  <input class="add-class-detail" id="date_tue" type="button" name="date_tue_field" value="화">
-                  <input class="add-class-detail" id="date_wed" type="button" name="date_wed_field" value="수">
-                  <input class="add-class-detail" id="date_thr" type="button" name="date_thr_field" value="목">
-                  <input class="add-class-detail" id="date_fri" type="button" name="date_fri_field" value="금">
-                </p>
-                
-                <p>
-                  <label for="start_time">강의시작시간</label>
-                  <input id="start_time" type="time" name="start_time_field" value="13:30" min="09:00" max="19:00" step="1800">
-                </p>
-                
-                <p>
-                  <label for="end_time">강의종료시간</label>
-                  <input id="end_time" type="time" name="end_time_field" value="13:30" min="09:00" max="19:00" step="1800">
-                </p>
-
-                <p>
-                  <label for="professor_name">교수님</label>
-                  <input id="professor_name" type="text" name="professor_name_field" placeholder="교수님을 입력해주세요">
-                </p>
-
-                <p>
-                  <label for="location">장소</label>
-                  <input id="location" type="text" name="location_field" placeholder="장소를 입력해주세요">
-                </p>
-
-                <input id="complete-add" type="submit" value="완료">
-              </form>
-            </div> -->
+            <img src="{% static 'img/add.png' %}" alt="" />
           </div>
         </div>
-      </main>
+        
+        <div class="friend_list-container">
+          <p class="friend_list">친구목록</p>
+          {% for friend in friends %}
+          <div class="major-name-container">
+            <div class="major-name-box">
+              <p class="major">공학계열</p>
+              <p class="name">{{ friend.name }}({{friend.nickname}})</p>
+            </div>
+            <img src="{% static 'img/delete.png' %}" alt="" />
+          </div>
+          {% endfor %}
+          
+        </div>
+        <button class="add-class-btn" id="contents" >강의 추가</button>
+      </div>
+    </main>
   </body>
 </html>

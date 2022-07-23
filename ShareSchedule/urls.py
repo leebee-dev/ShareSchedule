@@ -19,5 +19,6 @@ from empty_time import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home),
+    path('', views.home, name='home'),
+    path('/class/create', views.create_class, name='create_class'),
 ]
