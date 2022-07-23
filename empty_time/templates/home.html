@@ -193,42 +193,41 @@
                 <td>ㅤ</td>
               </tr>
             </table>
+        </div>
+      </div>
+
+      <div class="aside">
+        <div class="search">
+          <div class="search-box">
+            <img src="{% static 'img/search.png' %}" alt="" />
+            <input type="text" placeholder="검색" />
+          </div>
+
+          <div class="major-name-container">
+            <div class="major-name-box">
+              <p class="major">항공전자정보공학부</p>
+              <p class="name">{{user.name}}({{user.nickname}})</p>
+            </div>
+            <img src="{% static 'img/add.png' %}" alt="" />
           </div>
         </div>
 
-        <div class="aside">
-          <div class="search">
-            <div class="search-box">
-              <img src="{% static 'img/search.png' %}" alt="" />
-              <input type="text" placeholder="검색" />
+        <div class="friend_list-container">
+          <p class="friend_list">친구목록</p>
+          {% for friend in friends %}
+          <div class="major-name-container">
+            <div class="major-name-box">
+              <p class="major">공학계열</p>
+              <p class="name">{{ friend.name }}({{friend.nickname}})</p>
             </div>
-            
-            <div class="major-name-container">
-              <div class="major-name-box">
-                <p class="major">항공전자정보공학부</p>
-                <p class="name">{{user.name}}({{user.nickname}})</p>
-              </div>
-              <img src="{% static 'img/add.png' %}" alt="" />
-            </div>
+            <img src="{% static 'img/delete.png' %}" alt="" />
           </div>
-
-          <div class="friend_list-container">
-            <p class="friend_list">친구목록</p>
-            {% for friend in friends %}
-            <div class="major-name-container">
-              <div class="major-name-box">
-                <p class="major">자유전공학부</p>
-                <p class="name">{{ friend.name }}({{friend.nickname}})</p>
-              </div>
-              <img src="{% static 'img/delete.png' %}" alt="" />
-            </div>
-            {% endfor %}
-            
+          {% endfor %}
 
           <button class="add-class-btn">강의 추가</button>
 
           <div id="class-adding">
-            <form action="" method="post">
+            <form action="{% url 'create_class' %}" method="post">
               {% csrf_token %}
               <p>
                 <label class="class-name-title" for="class_name">강의명</label>
