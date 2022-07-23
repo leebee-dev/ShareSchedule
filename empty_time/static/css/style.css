@@ -90,6 +90,18 @@
     font-style: normal;
 }
 
+table {
+    width: 100%;
+    border: 1px solid #444444;
+    border-collapse: collapse;
+	width: 400px;
+	height: 600px;
+}
+
+td {
+    border: 1px solid #444444;
+}
+
 main {
     display: flex;
     justify-content: center; 
