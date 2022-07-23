@@ -24,103 +24,143 @@
           <a href="">Setting</a> 
         </div>
       </nav>
-      
+
       <main>
-          <div class="week">
-            <p>MON</p>
-            <p>TUE</p>
-            <p>WED</p>
-            <p>TUE</p>
-            <p>FRI</p>
-          </div>
+        <div class="week">
+          <p>MON</p>
+          <p>TUE</p>
+          <p>WED</p>
+          <p>TUE</p>
+          <p>FRI</p>
+        </div>
+      
+        <tbody>
+          <tr>
+            <td></td>
+          <tr>
+        </tbody>
         
-          <tbody>
-            <tr>
-              <td></td>
-            <tr>
-          </tbody>
+        <div class="aside">
+      
+        <div class="search">
+          <div class="search-box">
+            <img src="{% static 'img/search.png' %}" alt="">
+            <input type="text" placeholder="검색">
+          </div>
           
-          <div class="asdie">
-            <button class="add-class-btn">강의 추가</button>
-  
-            <div class="search">
-              <div class="search-box">
-                <img src="{% static 'img/search.png' %}" alt="">
-                <input type="text" placeholder="검색">
-              </div>
-              
-              <div class="major-name-container">
-                <div class="major-name-box">
-                  <p class="major">항공전자정보공학부</p>
-                  <p>오상준(yoon55)</p>
-                </div>
-                  <img src="{% static 'img/add.png' %}" alt="">
-              </div>
-            </div>
-  
-            <div class="friend_list-container">
-              <p class="friend_list">친구목록</p>
-  
-              <div class="major-name-container">
-                <div class="major-name-box">
-                  <p class="major">항공전자정보공학부</p>
-                  <p>오상준(yoon55)</p>
-                </div>
-              </div>
-              <img src="{% static 'img/delete.png' %}" alt="">
-  
+          <div class="major-name-container">
+            <div class="major-name-box">
               <p class="major">항공전자정보공학부</p>
-              <p>오상준(yoon55)</p>
-              <img src="{% static 'img/delete.png' %}" alt="">
-  
-              <p class="major">항공전자정보공학부</p>
-              <p>오상준(yoon55)</p>
-  
+              <p class="name">오상준(sflkj25)</p>
             </div>
+              <img src="{% static 'img/add.png' %}" alt="">
           </div>
-        </main>
+        </div>
 
-    <button class="add-class-btn">강의추가</button>
+        <div class="friend_list-container">
+          <p class="friend_list">친구목록</p>
 
-    <div id="class-adding">
-      <form action="" method="post">
-        {% csrf_token %}
-        <p>
-          <label for="class_name">강의명</label>
-          <input id="class_name" type="text" name="class_name_field" placeholder="강의명을 입력해주세요">
-        </p>
-        
-        <p>
-          <label for="date">요일</label>
-          <input id="date_mon" type="button" name="date_mon_field" value="월">
-          <input id="date_tue" type="button" name="date_tue_field" value="화">
-          <input id="date_wed" type="button" name="date_wed_field" value="수">
-          <input id="date_thr" type="button" name="date_thr_field" value="목">
-          <input id="date_fri" type="button" name="date_fri_field" value="금">
-        </p>
-        
-        <p>
-          <label for="start_time">강의시작시간</label>
-          <input id="start_time" type="time" name="start_time_field" value="13:30" min="09:00" max="19:00" step="1800">
-        </p>
-        
-        <p>
-          <label for="end_time">강의종료시간</label>
-          <input id="end_time" type="time" name="end_time_field" value="13:30" min="09:00" max="19:00" step="1800">
-        </p>
+          <div class="major-name-container">
+            <div class="major-name-box">
+              <p class="major">자유전공학부</p>
+              <p class="name">윤예지(ysdfkjhk1112)</p>
+            </div>
+          <img src="{% static 'img/delete.png' %}" alt="">
+          </div>
 
-        <p>
-          <label for="professor_name">교수님</label>
-          <input id="professor_name" type="text" name="professor_name_field" placeholder="교수님을 입력해주세요">
-        </p>
+          <div class="major-name-container">
+            <div class="major-name-box">
+              <p class="major">소프트웨어학과</p>
+              <p class="name">김주안(djjefk123)</p>
+            </div>
+          <img src="{% static 'img/delete.png' %}" alt="">
+          </div>
 
-        <p>
-          <label for="location">장소</label>
-          <input id="location" type="text" name="location_field" placeholder="장소를 입력해주세요">
-        </p>
+          <div class="major-name-container">
+            <div class="major-name-box">
+              <p class="major">항공우주기계공학부</p>
+              <p class="name">박준형(sdfkk13)
+              </p>
+            </div>
+          <img src="{% static 'img/delete.png' %}" alt="">
+          </div>
 
-        <input id="complete-add" type="submit" value="완료">
-      </form>
-    </div>
+          <div class="major-name-container">
+            <div class="major-name-box">
+              <p class="major">소프트웨어학과</p>
+              <p class="name">이준희(kjopvjjkw499)</p>
+            </div>
+          <img src="{% static 'img/delete.png' %}" alt="">
+          </div>
+
+          <div class="major-name-container">
+            <div class="major-name-box">
+              <p class="major">항공전자정보공학부</p>
+              <p class="name">오상준(yoon55)</p>
+            </div>
+          <img src="{% static 'img/delete.png' %}" alt="">
+          </div>
+
+          <div class="major-name-container">
+            <div class="major-name-box">
+              <p class="major">자유전공학부</p>
+              <p class="name">윤예지(ysdfkjhk1112)</p>
+            </div>
+          <img src="{% static 'img/delete.png' %}" alt="">
+          </div>
+
+          <div class="major-name-container">
+            <div class="major-name-box">
+              <p class="major">소프트웨어학과</p>
+              <p class="name">김주안(djjefk123)</p>
+            </div>
+          <img src="{% static 'img/delete.png' %}" alt="">
+          </div>
+
+
+        </div>
+        <button class="add-class-btn">강의 추가</button>
+
+        <div id="class-adding">
+          <form action="" method="post">
+            {% csrf_token %}
+            <p>
+              <label for="class_name">강의명</label>
+              <input id="class_name" type="text" name="class_name_field" placeholder="강의명을 입력해주세요">
+            </p>
+            
+            <p>
+              <label for="date">요일</label>
+              <input id="date_mon" type="button" name="date_mon_field" value="월">
+              <input id="date_tue" type="button" name="date_tue_field" value="화">
+              <input id="date_wed" type="button" name="date_wed_field" value="수">
+              <input id="date_thr" type="button" name="date_thr_field" value="목">
+              <input id="date_fri" type="button" name="date_fri_field" value="금">
+            </p>
+            
+            <p>
+              <label for="start_time">강의시작시간</label>
+              <input id="start_time" type="time" name="start_time_field" value="13:30" min="09:00" max="19:00" step="1800">
+            </p>
+            
+            <p>
+              <label for="end_time">강의종료시간</label>
+              <input id="end_time" type="time" name="end_time_field" value="13:30" min="09:00" max="19:00" step="1800">
+            </p>
+
+            <p>
+              <label for="professor_name">교수님</label>
+              <input id="professor_name" type="text" name="professor_name_field" placeholder="교수님을 입력해주세요">
+            </p>
+
+            <p>
+              <label for="location">장소</label>
+              <input id="location" type="text" name="location_field" placeholder="장소를 입력해주세요">
+            </p>
+
+            <input id="complete-add" type="submit" value="완료">
+          </form>
+        </div>
+      </main>
   </body>
 </html>
