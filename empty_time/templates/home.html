@@ -6,318 +6,366 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-    <script src="{% static 'js/home.js' %}"> </script>
+    <script src="{% static 'js/home.js' %}"></script>
     <title>Empty Time</title>
   </head>
 
-    <body>
-      <nav class="navbar">
+  <body>
+    <nav class="navbar">
+      <div class="navbar__logo">
+        <img src="{% static 'img/logo.png' %}" alt="" />
+        <p>EmptyTime</p>
+      </div>
 
-        <div class="navbar__logo">
-          <img src="{% static 'img/logo.png' %}" alt="">
-          <p>EmptyTime</p>
-        </div>
-    
-        <div class="navbar__menu">
-          <a href="">Sign in</a>
-          <a href="">Sign up</a>
-          <a href="">Setting</a> 
-        </div>
-      </nav>
+      <div class="navbar__menu">
+        <a href="">Sign in</a>
+        <a href="">Sign up</a>
+        <a href="">Setting</a>
+      </div>
+    </nav>
 
-      <main>
-        <div class="wrap">
-          <div class="center">
-            <div class="week">
-              <p>TIME</p>
-              <p>MON</p>
-              <p>TUE</p>
-              <p>WED</p>
-              <p>TUE</p>
-              <p>FRI</p>
-            </div>
-          
-            <table class="schedule">
-              <tr>
-                <td rowspan="3">09:00 ~ 10:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              <tr>
-              <tr>
-                <!-- <td>09:30~10:00</td>
+    <main>
+      <p style="display:none;" id='user_class_info'>{{schedules}}</p>
+      <div class="wrap">
+        <div class="center">
+          <div class="week">
+            <p>TIME</p>
+            <p>MON</p>
+            <p>TUE</p>
+            <p>WED</p>
+            <p>TUE</p>
+            <p>FRI</p>
+          </div>
+
+          <table class="schedule">
+            <tr>
+              <td rowspan="3">09:00 ~ 10:00</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr></tr>
+            <tr>
+              <!-- <td>09:30~10:00</td>
                 <td>09:30~10:00</td>
                 <td>09:30~10:00</td>
                 <td>09:30~10:00</td>
                 <td>09:30~10:00</td> -->
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              <tr>
-              <tr>
-                <td rowspan="3">10:00 ~ 11:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              <tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              <tr>
-              <tr>
-                <td rowspan="3">11:00 ~ 12:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              <tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              <tr>
-              <tr>
-                <td rowspan="3">12:00 ~ 13:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              <tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              <tr>
-              <tr>
-                <td rowspan="3">13:00 ~ 14:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              <tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              <tr>
-              <tr>
-                <td rowspan="3">14:00 ~ 15:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              <tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              <tr>
-              <tr>
-                <td rowspan="3">15:00 ~ 16:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              <tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              <tr>
-              <tr>
-                <td rowspan="3">16:00 ~ 17:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              <tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              <tr>
-              <tr>
-                <td rowspan="3">17:00 ~ 18:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              <tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              <tr>
-              <tr>
-                <td rowspan="3">18:00 ~ 19:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              <tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              <tr>
-            </table>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr></tr>
+            <tr>
+              <td rowspan="3">10:00 ~ 11:00</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr></tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr></tr>
+            <tr>
+              <td rowspan="3">11:00 ~ 12:00</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr></tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr></tr>
+            <tr>
+              <td rowspan="3">12:00 ~ 13:00</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr></tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr></tr>
+            <tr>
+              <td rowspan="3">13:00 ~ 14:00</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr></tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr></tr>
+            <tr>
+              <td rowspan="3">14:00 ~ 15:00</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr></tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr></tr>
+            <tr>
+              <td rowspan="3">15:00 ~ 16:00</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr></tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr></tr>
+            <tr>
+              <td rowspan="3">16:00 ~ 17:00</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr></tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr></tr>
+            <tr>
+              <td rowspan="3">17:00 ~ 18:00</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr></tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr></tr>
+            <tr>
+              <td rowspan="3">18:00 ~ 19:00</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr></tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr></tr>
+          </table>
+        </div>
+
+        <div class="aside">
+          <div class="search">
+            <div class="search-box">
+              <img src="{% static 'img/search.png' %}" alt="" />
+              <input type="text" placeholder="검색" />
+            </div>
+            
+            <div class="major-name-container">
+              <div class="major-name-box">
+                <p class="major">항공전자정보공학부</p>
+                <p class="name">{{user.name}}({{user.nickname}})</p>
+              </div>
+              <img src="{% static 'img/add.png' %}" alt="" />
+            </div>
           </div>
-          
-          <div class="aside">
-        
-            <div class="search">
-              <div class="search-box">
-                <img src="{% static 'img/search.png' %}" alt="">
-                <input type="text" placeholder="검색">
+
+          <div class="friend_list-container">
+            <p class="friend_list">친구목록</p>
+            {% for friend in friends %}
+            <div class="major-name-container">
+              <div class="major-name-box">
+                <p class="major">자유전공학부</p>
+                <p class="name">{{ friend.name }}({{friend.nickname}})</p>
               </div>
-              
-              <div class="major-name-container">
-                <div class="major-name-box">
-                  <p class="major">항공전자정보공학부</p>
-                  <p class="name">오상준(sflkj25)</p>
-                </div>
-                <img src="{% static 'img/add.png' %}" alt="">
-              </div>
+              <img src="{% static 'img/delete.png' %}" alt="" />
             </div>
+            {% endfor %}
+            
 
-            <div class="friend_list-container">
-              <p class="friend_list">친구목록</p>
+          <button class="add-class-btn">강의 추가</button>
 
-              <div class="major-name-container">
-                <div class="major-name-box">
-                  <p class="major">자유전공학부</p>
-                  <p class="name">윤예지(ysdfkjhk1112)</p>
-                </div>
-                <img src="{% static 'img/delete.png' %}" alt="">
-              </div>
+          <div id="class-adding">
+            <form action="" method="post">
+              {% csrf_token %}
+              <p>
+                <label class="class-name-title" for="class_name">강의명</label>
+                <input
+                  class="class-name"
+                  id="class_name"
+                  type="text"
+                  name="class_name_field"
+                  placeholder="강의명을 입력해주세요"
+                />
+              </p>
 
-              <div class="major-name-container">
-                <div class="major-name-box">
-                  <p class="major">소프트웨어학과</p>
-                  <p class="name">김주안(djjefk123)</p>
-                </div>
-                <img src="{% static 'img/delete.png' %}" alt="">
-              </div>
+              <p>
+                <label for="date">요일</label>
+                <input
+                  id="date_mon"
+                  type="button"
+                  name="date_mon_field"
+                  value="월"
+                />
+                <input
+                  id="date_tue"
+                  type="button"
+                  name="date_tue_field"
+                  value="화"
+                />
+                <input
+                  id="date_wed"
+                  type="button"
+                  name="date_wed_field"
+                  value="수"
+                />
+                <input
+                  id="date_thr"
+                  type="button"
+                  name="date_thr_field"
+                  value="목"
+                />
+                <input
+                  id="date_fri"
+                  type="button"
+                  name="date_fri_field"
+                  value="금"
+                />
+              </p>
 
-              <div class="major-name-container">
-                <div class="major-name-box">
-                  <p class="major">항공우주기계공학부</p>
-                  <p class="name">박준형(sdfkk13)
-                  </p>
-                </div>
-                <img src="{% static 'img/delete.png' %}" alt="">
-              </div>
+              <p>
+                <label for="start_time">강의시작시간</label>
+                <input
+                  id="start_time"
+                  type="time"
+                  name="start_time_field"
+                  value="13:30"
+                  min="09:00"
+                  max="19:00"
+                  step="1800"
+                />
+              </p>
 
-              <div class="major-name-container">
-                <div class="major-name-box">
-                  <p class="major">소프트웨어학과</p>
-                  <p class="name">이준희(kjopvjjkw499)</p>
-                </div>
-                <img src="{% static 'img/delete.png' %}" alt="">
-              </div>
+              <p>
+                <label for="end_time">강의종료시간</label>
+                <input
+                  id="end_time"
+                  type="time"
+                  name="end_time_field"
+                  value="13:30"
+                  min="09:00"
+                  max="19:00"
+                  step="1800"
+                />
+              </p>
 
-              <div class="major-name-container">
-                <div class="major-name-box">
-                  <p class="major">항공전자정보공학부</p>
-                  <p class="name">오상준(yoon55)</p>
-                </div>
-                <img src="{% static 'img/delete.png' %}" alt="">
-              </div>
+              <p>
+                <label for="professor_name">교수님</label>
+                <input
+                  id="professor_name"
+                  type="text"
+                  name="professor_name_field"
+                  placeholder="교수님을 입력해주세요"
+                />
+              </p>
 
-              <div class="major-name-container">
-                <div class="major-name-box">
-                  <p class="major">자유전공학부</p>
-                  <p class="name">윤예지(ysdfkjhk1112)</p>
-                </div>
-                <img src="{% static 'img/delete.png' %}" alt="">
-              </div>
+              <p>
+                <label for="location">장소</label>
+                <input
+                  id="location"
+                  type="text"
+                  name="location_field"
+                  placeholder="장소를 입력해주세요"
+                />
+              </p>
 
-              <div class="major-name-container">
-                <div class="major-name-box">
-                  <p class="major">소프트웨어학과</p>
-                  <p class="name">김주안(djjefk123)</p>
-                </div>
-                <img src="{% static 'img/delete.png' %}" alt="">
-              </div>
-            </div>
-
-            <button class="add-class-btn">강의 추가</button>
-
-            <div id="class-adding">
-              <form action="" method="post">
-                {% csrf_token %}
-                <p>
-                  <label class="class-name-title" for="class_name">강의명</label>
-                  <input class="class-name" id="class_name" type="text" name="class_name_field" placeholder="강의명을 입력해주세요">
-                </p>
-                
-                <p>
-                  <label for="date">요일</label>
-                  <input id="date_mon" type="button" name="date_mon_field" value="월">
-                  <input id="date_tue" type="button" name="date_tue_field" value="화">
-                  <input id="date_wed" type="button" name="date_wed_field" value="수">
-                  <input id="date_thr" type="button" name="date_thr_field" value="목">
-                  <input id="date_fri" type="button" name="date_fri_field" value="금">
-                </p>
-                
-                <p>
-                  <label for="start_time">강의시작시간</label>
-                  <input id="start_time" type="time" name="start_time_field" value="13:30" min="09:00" max="19:00" step="1800">
-                </p>
-                
-                <p>
-                  <label for="end_time">강의종료시간</label>
-                  <input id="end_time" type="time" name="end_time_field" value="13:30" min="09:00" max="19:00" step="1800">
-                </p>
-
-                <p>
-                  <label for="professor_name">교수님</label>
-                  <input id="professor_name" type="text" name="professor_name_field" placeholder="교수님을 입력해주세요">
-                </p>
-
-                <p>
-                  <label for="location">장소</label>
-                  <input id="location" type="text" name="location_field" placeholder="장소를 입력해주세요">
-                </p>
-
-                <input id="complete-add" type="submit" value="완료">
-              </form>
-            </div>
+              <input id="complete-add" type="submit" value="완료" />
+            </form>
           </div>
         </div>
-      </main>
+      </div>
+    </main>
   </body>
 </html>

@@ -1,7 +1,3 @@
-
-
-
-
 def find_empty_schedule(empty_schedule, s_datetime, e_datetime):
     #시간을 고유한 값으로 바꿔주기
     start= ((s_datetime.hour-9) + (s_datetime.minute/60))*2
@@ -19,7 +15,7 @@ def fill_empty_schedule_by_user_id(class_dict):
     #USER 의 클래스를 가져오는 코드
 
     result = {}
-    for (user_id, classinfos) in class_dict:
+    for (user_id, classinfos) in class_dict.items():
         empty_schedule = [[1 for j in range(20)] for i in  range(5)]
         for classinfo in classinfos:
             s_datetime = classinfo.start_time
