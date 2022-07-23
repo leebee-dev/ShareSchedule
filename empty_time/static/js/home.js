@@ -4,7 +4,7 @@ window.onload = function(){
         popup();
     });
 
-    let class_add_complete_btn = document.getElementById("complete");
+    let class_add_complete_btn = document.getElementById("complete-add");
     class_add_complete_btn.addEventListener('click',function(event){
         popdown();
     });
