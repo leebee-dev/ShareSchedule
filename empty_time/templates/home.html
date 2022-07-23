@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="{% static 'js/home.js' %}"></script>
     <title>Empty Time</title>
   </head>
@@ -13,6 +14,7 @@
   <body>
     <nav class="navbar">
       </div>
+<<<<<<< HEAD
         <div class="navbar__logo">
           <img src="{% static 'img/logo.png' %}" alt="">
           <p>EmptyTime</p>
@@ -192,8 +194,17 @@
             </tr>
           </table>
         </div>
-      </div>
+=======
 
+      <div class="navbar__menu">
+        <a href="">Sign in</a>
+        <a href="">Sign up</a>
+        <a href="">Setting</a>
+>>>>>>> d0a42fa4ffb541c6ebc94835d1dba5edd2d96f55
+      </div>
+    </nav>
+
+<<<<<<< HEAD
       <div class="aside">
         <div class="search">
           <div class="search-box">
@@ -222,16 +233,23 @@
             <img src="{% static 'img/delete.png' %}" alt="" />
           </div>
           {% endfor %}
-
-          <button class="add-class-btn">강의 추가</button>
-
-          <div id="class-adding">
-            <form action="{% url 'create_class' %}" method="post">
+=======
+    <main>
+      <div id="popup">
+        <div id="popmenu">
+          <div class="class-adding-html" id="class-adding">
+            <form action="" method="post">
               {% csrf_token %}
+>>>>>>> d0a42fa4ffb541c6ebc94835d1dba5edd2d96f55
+
+              <div class="exit-d">
+                <button id="exit" class="exit">X</button>
+              </div>
+
               <p>
-                <label class="class-name-title" for="class_name">강의명</label>
+                <label class="add-class-detail" for="class_name">강의명</label>
                 <input
-                  class="class-name"
+                  class="add-class-input"
                   id="class_name"
                   type="text"
                   name="class_name_field"
@@ -240,32 +258,37 @@
               </p>
 
               <p>
-                <label for="date">요일</label>
+                <label class="add-class-detail" for="date">요일</label>
                 <input
+                  class="add-class-detail"
                   id="date_mon"
                   type="button"
                   name="date_mon_field"
                   value="월"
                 />
                 <input
+                  class="add-class-detail"
                   id="date_tue"
                   type="button"
                   name="date_tue_field"
                   value="화"
                 />
                 <input
+                  class="add-class-detail"
                   id="date_wed"
                   type="button"
                   name="date_wed_field"
                   value="수"
                 />
                 <input
+                  class="add-class-detail"
                   id="date_thr"
                   type="button"
                   name="date_thr_field"
                   value="목"
                 />
                 <input
+                  class="add-class-detail"
                   id="date_fri"
                   type="button"
                   name="date_fri_field"
@@ -300,8 +323,11 @@
               </p>
 
               <p>
-                <label for="professor_name">교수님</label>
+                <label class="add-class-detail" for="professor_name"
+                  >교수님</label
+                >
                 <input
+                  class="add-class-input"
                   id="professor_name"
                   type="text"
                   name="professor_name_field"
@@ -310,8 +336,9 @@
               </p>
 
               <p>
-                <label for="location">장소</label>
+                <label class="add-class-detail" for="location">장소</label>
                 <input
+                  class="add-class-input"
                   id="location"
                   type="text"
                   name="location_field"
@@ -319,10 +346,215 @@
                 />
               </p>
 
-              <input id="complete-add" type="submit" value="완료" />
+              <input
+                class="complete"
+                id="complete-add"
+                type="submit"
+                value="완료"
+              />
             </form>
           </div>
         </div>
+      </div>
+      <p style="display: none" id="user_class_info">{{schedules}}</p>
+      <div class="wrap">
+        <div class="center">
+          <!--contents-->
+          <!-- <div id="contents">여기를 누르면 전체 팝업이 뜹니다.</div> -->
+
+          <div class="week">
+            <p>TIME</p>
+            <p>MON</p>
+            <p>TUE</p>
+            <p>WED</p>
+            <p>TUE</p>
+            <p>FRI</p>
+          </div>
+
+          <table id="table-schedule" class="schedule">
+            <tr>
+              <td rowspan="2">09:00 ~ 10:00</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+            </tr>
+            <tr>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+            </tr>
+            <tr>
+              <td rowspan="2">10:00 ~ 11:00</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+            </tr>
+            <tr>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+            </tr>
+            <tr>
+              <td rowspan="2">11:00 ~ 12:00</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+            </tr>
+            <tr>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+            </tr>
+            <tr>
+              <td rowspan="2">12:00 ~ 13:00</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+            </tr>
+            <tr>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+            </tr>
+            <tr>
+              <td rowspan="2">13:00 ~ 14:00</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+            </tr>
+            <tr>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+            </tr>
+            <tr>
+              <td rowspan="2">14:00 ~ 15:00</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+            </tr>
+            <tr>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+            </tr>
+            <tr>
+              <td rowspan="2">15:00 ~ 16:00</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+            </tr>
+            <tr>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+            </tr>
+            <tr>
+              <td rowspan="2">16:00 ~ 17:00</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+            </tr>
+            <tr>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+            </tr>
+            <tr>
+              <td rowspan="2">17:00 ~ 18:00</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+            </tr>
+            <tr>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+            </tr>
+            <tr>
+              <td rowspan="2">18:00 ~ 19:00</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+            </tr>
+            <tr>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+              <td>ㅤ</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="aside">
+        <div class="search">
+          <div class="search-box">
+            <img src="{% static 'img/search.png' %}" alt="" />
+            <input type="text" placeholder="검색" />
+          </div>
+
+          <div class="major-name-container">
+            <div class="major-name-box">
+              <p class="major">항공전자정보공학부</p>
+              <p class="name">{{user.name}}({{user.nickname}})</p>
+            </div>
+            <img src="{% static 'img/add.png' %}" alt="" />
+          </div>
+        </div>
+
+        <div class="friend_list-container">
+          <p class="friend_list">친구목록</p>
+          {% for friend in friends %}
+          <div class="major-name-container">
+            <div class="major-name-box">
+              <p class="major">공학계열</p>
+              <p class="name">{{ friend.name }}({{friend.nickname}})</p>
+            </div>
+            <img src="{% static 'img/delete.png' %}" alt="" />
+          </div>
+          {% endfor %}
+        </div>
+        <button class="add-class-btn" id="contents">강의 추가</button>
       </div>
     </main>
   </body>
