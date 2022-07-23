@@ -7,10 +7,13 @@ def home(request):
 	user = UserInfo.objects.get(name="오상준")
 	classes = _get_class_by_user(user.user_id)
 	friends = _get_friend_by_user(user.user_id)
-	friend_classes = _get_class_by_users(friends)
-	all_classes = list(set(classes + friend_classes))
-
-	return render(request, "home.html", {'classes':classes, 'friends':friends})
+	friend_classes = []
+	for friend in friends:
+		friend_classes.append(_get_class_by_user(friend.user_id))
+	# friend_classes = _get_class_by_users(friends)
+	# all_classes = list(set(classes + friend_classes))
+	print(friend_classes)
+	return render(request, "home.html", {'classes':classes, 'friends':friends, 'friend_classes':friend_classes})
 
 def _get_class_by_user(user_id):
 	class_ids = set(ClassOfUser.objects.filter(user_id=user_id))
