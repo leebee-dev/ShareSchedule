@@ -19,8 +19,14 @@ def home(request):
 	return render(request, "home.html", {'user':user, 'friends':friends, 'schedules':schedules})
 
 def create_class(request):
-	if request.method == 'POST':
-		print(request.POST)
+	# if request.method == 'POST':
+	# 	new = ClassInfo()
+	# 	new.class_name = request.POST.get('class_name_field')
+	# 	new.start_time = request.POST.get('start_time_field')
+	# 	new.end_time = request.POST.get('end_time_field')
+	# 	new.professor_name = request.POST.get('professor_name_field')
+	# 	new.save()
+	# 	print(request.POST)
 	return redirect('home')
 
 def _get_class_by_user(user_id):
