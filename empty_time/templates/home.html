@@ -275,8 +275,9 @@
             </div>
 
             <button class="add-class-btn">강의 추가</button>
+            <!-- <input class="add-class-btn" type="button" value="강의 추가" onclick="showPopup();"  > -->
 
-            <div id="class-adding">
+            <div class="class-adding-html" id="class-adding">
               <form action="" method="post">
                 {% csrf_token %}
                 <p>
@@ -285,12 +286,12 @@
                 </p>
                 
                 <p>
-                  <label for="date">요일</label>
-                  <input id="date_mon" type="button" name="date_mon_field" value="월">
-                  <input id="date_tue" type="button" name="date_tue_field" value="화">
-                  <input id="date_wed" type="button" name="date_wed_field" value="수">
-                  <input id="date_thr" type="button" name="date_thr_field" value="목">
-                  <input id="date_fri" type="button" name="date_fri_field" value="금">
+                  <label class="date-title" for="date">요일</label>
+                  <input class="date" id="date_mon" type="button" name="date_mon_field" value="월">
+                  <input class="date" id="date_tue" type="button" name="date_tue_field" value="화">
+                  <input class="date" id="date_wed" type="button" name="date_wed_field" value="수">
+                  <input class="date" id="date_thr" type="button" name="date_thr_field" value="목">
+                  <input class="date" id="date_fri" type="button" name="date_fri_field" value="금">
                 </p>
                 
                 <p>

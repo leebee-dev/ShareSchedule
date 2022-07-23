@@ -163,7 +163,7 @@ main {
 	background-color: white;
     border-style: solid;
     border-color: #e9e9e9;
-    width: 240px;
+    width: 100%;
     height: 60px;
     border-radius: 6px;
     font-family: 'Pretendard';
@@ -282,3 +282,16 @@ td {
 
 }
 
+.class-name-title {
+    font-family: 'Pretendard';
+    font-weight: 400;
+	font-size: 20px;
+	color: #535c6a;
+}
+
+.class-name {
+    font-family: 'Pretendard';
+    font-weight: 400;
+	font-size: 20px;
+	color: #535c6a;
+}
